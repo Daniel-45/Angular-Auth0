@@ -1,0 +1,65 @@
+<div>
+  <h4>NgClass</h4>
+  <p>Esta directiva añade y elimina clases CSS en un elemento HTML.</p>
+
+  <!-- Cambiar color de la alerta -->
+  <div [ngClass]="colorAlerta" class="alert" role="alert">
+    <h4 class="alert-heading">Well done!</h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat.
+    </p>
+    <hr>
+    <p class="mb-0">
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+
+  <p>Haz clic en los botones para cambiar el color de la alerta.</p>
+
+  <button class="btn btn-primary mr-1" (click)="colorAlerta = 'alert-primary'">
+    Primary
+  </button>
+
+  <button class="btn btn-success mr-1" (click)="colorAlerta = 'alert-success'">
+    Success
+  </button>
+
+  <button class="btn btn-danger" (click)="colorAlerta = 'alert-danger'">
+    Danger
+  </button>
+
+  <!-- Cambiar color del texto -->
+  <div class="border rounded p-3 mt-4" [ngClass]="{'text-primary': colorTexto.color, 'text-dark': !colorTexto.color}">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+
+    <p>Haz clic en el botón para cambiar el color del texto.</p>
+
+    <button class="btn m-btn" (click)="colorTexto.color = !colorTexto.color"
+      [ngClass]="{'btn-primary': colorTexto.color, 'btn-dark': !colorTexto.color}">
+      Color
+    </button>
+  </div>
+
+  <div class="mt-4">
+    <form>
+      <div class="form-group">
+        <label for="textarea">Comentario</label>
+        <textarea class="form-control" id="textarea" rows="3"></textarea>
+      </div>
+      <button class="btn btn-primary m-btn" (click)="ejecutar()" [disabled]="cargando">
+        <i [ngClass]="{'fa-save': !cargando, 'fa-refresh fa-spin': cargando}" class="fa">
+        </i>
+        <span *ngIf="!cargando"> Guardar</span>
+        <span *ngIf="cargando"> Guardando</span>
+      </button>
+    </form>
+  </div>
+  <p class="text-primary mt-3">{{respuesta}}</p>
+</div>

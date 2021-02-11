@@ -1,0 +1,55 @@
+<div>
+    <h4>NgSwitch</h4>
+    <p>
+      Esta directiva en un contenedor especifica una expresión con la que comparar. 
+      Las expresiones para hacer coincidir las proporcionan las directivas ngSwitchCase en las vistas dentro del contenedor.
+    </p>
+  
+    <ul>
+      <li>Se renderizan todas las vistas que coinciden.</li>
+      <li>
+        Si no hay coincidencias, se representa una vista con la directiva ngSwitchDefault.
+      </li>
+      <li>
+        Los elementos dentro de la instrucción [NgSwitch] pero fuera de cualquier directiva NgSwitchCase o ngSwitchDefault
+        se conservan en la ubicación.
+      </li>
+    </ul>
+  
+    <div [ngSwitch]="alerta">
+      <div *ngSwitchCase="'primary'" class="alert alert-primary" role="alert">
+        A simple primary alert-check it out!
+      </div>
+      <div *ngSwitchCase="'danger'" class="alert alert-danger" role="alert">
+          A simple danger alert-check it out!
+      </div>
+      <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        A simple success alert-check it out!
+      </div>
+      <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+        A simple warning alert-check it out!
+      </div>
+      <div *ngSwitchDefault class="alert alert-info" role="alert">
+        A simple info alert-check it out!
+      </div>
+    </div>
+  
+    <p>Haz clic en los botones para cambiar el tipo de alerta.</p>
+  
+    <button class="btn btn-primary mr-1" (click)="alertaPrimary()">
+      Primary
+    </button>
+  
+    <button class="btn btn-success mr-1" (click)="alertaSuccess()">
+      Success
+    </button>
+  
+    <button class="btn btn-warning text-white mr-1" (click)="alertaWarning()">
+      Warning
+    </button>
+  
+    <button class="btn btn-danger" (click)="alertaDanger()">
+      Danger
+    </button>
+  </div>
+  

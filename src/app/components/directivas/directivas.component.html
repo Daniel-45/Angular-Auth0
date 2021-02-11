@@ -1,0 +1,64 @@
+<div [ngStyle]="{'text-align': 'justify'}">
+  <h2>Directivas</h2>
+  <p>
+    Las directivas, junto con los componentes, son una pieza clave para poder construir
+    aplicaciones con Angular. Extienden la funcionalidad del HTML usando para ello una nueva sintaxis. Con ella podemos
+    usar lógica que será ejecutada en el <span>DOM (Document Object Model)</span>. Son, esencialmente, instrucciones
+    para manipular el DOM. De hecho, los componentes son un tipo de directiva, ya que cuando usamos el selector de un
+    componente, le estamos pidiendo a Angular que muestre dicho componente y su lógica de programación en algún lugar
+    determinado del DOM.
+  </p>
+  <p>Se dividen en tres tipos diferentes:</p>
+  <ul>
+    <li>Directivas de Atributo</li>
+    <li>Directivas de estructurales</li>
+    <li>Componentes</li>
+  </ul>
+  <hr>
+  <h2>Directivas de atributo</h2>
+  <p>
+    Alteran la apariencia o comportamiento de un elemento del DOM y son usados como atributos de los elementos.
+  </p>
+  <p>Entre la directivas de atributo, encontramos:</p>
+  <div>
+    <h4>NgModel</h4>
+    <p>
+      Esta directiva crea una instancia de FormControl a partir de un modelo de dominio y la vincula a un elemento de
+      control de formulario.
+    </p>
+  </div>
+  <hr>
+  <app-ng-style></app-ng-style>
+  <hr>
+  <app-ng-class></app-ng-class>
+  <hr>
+  <h2>Directivas estructurales</h2>
+  <p>
+    Alteran la estructura del DOM, agregando, eliminando y manipulando los elementos a los que están unidos.
+  </p>
+  <p>En las directivas estructurales podemos encontrar las siguientes:</p>
+  <app-ng-if></app-ng-if>
+  <hr>
+  <app-ng-for></app-ng-for>
+  <hr>
+  <app-ng-switch></app-ng-switch>
+  <hr>
+  <div>
+    <h4>NgPlural</h4>
+    <p>
+      Esta directiva permite agregar o remover elementos del DOM, basado en un valor númerico. Para usar esta directiva,
+      se debe proporcionar un elemento contenedor que establezca el atributo [ngPlural] en una expresión de cambio. Los
+      elementos internos con un [ngPluralCase] ​​se mostrarán en función de su expresión.
+    </p>
+  </div>
+  <hr>
+  <div>
+    <h4>NgComponentOutlet</h4>
+    <p>
+      Crea una instancia de un solo tipo de componente e inserta su vista de host en la vista actual. NgComponentOutlet
+      proporciona un enfoque declarativo para la creación de componentes dinámicos.
+    </p>
+  </div>
+  <hr>
+  <app-mi-directiva></app-mi-directiva>
+</div>

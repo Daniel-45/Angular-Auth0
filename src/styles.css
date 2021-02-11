@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Houschka";
+  src: url("/assets/fonts/Houschka.ttf");
+}
+
+/* Estilos generales */
+* {
+  font-family: "Houschka", Arial, Helvetica, sans-serif;
+}
+
+.logo {
+  width: 46px;
+  height: 46px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0;
+}
+
+ul li {
+  margin-top: .5rem;
+}
+
+span {
+  font-weight: bold;
+}
+
+.m-btn {
+  font-weight: bold !important;
+}
+
+/* Media Queries */
+@media (max-width: 414px) {
+  .m-btn {
+    width: 100% !important;
+  }
+}
